@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/icon.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/pixel-footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -18,48 +17,68 @@
 
 <body>
 
-  <ul class="menu icons align-right">
-    <li><a href="https://www.facebook.com/profile.php?id=61578993526399"><img class="menu-icon" src="images/icons/facebook.svg"></a></li>
-    <li><a href="https://www.tiktok.com/@pixel_and_wood?_t=ZN-8yqRxwaWvaw&_r=1"><img class="menu-icon" src="images/icons/tiktok.svg" ></a></li>
-  </ul>
-
-  <div class="grid-container">
-    <div class="grid-x align-center">
-      <div class="cell shrink text-center">
-        <img class="logo-img" src="images/logo.svg" alt="Pixel &amp; Wood"/>
-      </div>
+<div class="grid-y page">
+    <!-- Top: your icon/buttons bar (constrained by grid-container) -->
+    <div class="cell shrink">
+        <ul class="menu icon align-right">
+            <li><a href="https://www.facebook.com/profile.php?id=61578993526399"><img class="social-icon" src="images/icons/facebook.svg"></a></li>
+            <li><a href="https://www.tiktok.com/@pixel_and_wood?_t=ZN-8yqRxwaWvaw&_r=1"><img class="social-icon" src="images/icons/tiktok.svg" ></a></li>
+        </ul>
     </div>
-  </div>
-  <div class="grid-container">
-    <div class="grid-x grid-margin-x align-center">
-      <div class="small-12 medium-2 large-2 cell">
-        <a href="about.html" class="circle-btn">
-          <img class="btn-img" src= "images/noun-about-5361219.svg" >
-          <span>About</span>
-        </a>
-      </div>
 
-      <div class="small-12 medium-2 large-2 cell">
-        <a href="#about"class="circle-btn">
-          <img class="btn-img" src="images/noun-pound-7903417.svg" >
-          <span>Price List</span>
-        </a>
-      </div>
 
-      <div class="small-12 medium-2 large-2 cell">
-        <a href="contact.html"class="circle-btn">
-          <img class="btn-img" src="images/noun-contact-7966362.svg" >
-          <span>Contact</span>
-        </a>
-      </div>
+    <!-- Middle: grows to fill leftover space -->
+    <div class="cell auto main-content-about flex">
+        <div class="grid-container">
+            <div class="grid-x align-center">
+                <div class="cell small-10 medium-8 text-center">
+                    <img class="logo-img" src="images/logo.svg" alt="Pixel &amp; Wood"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-center">
+          <div class="grid-container">
+            <div class="grid-x grid-margin-x align-center">
+
+              <div class="small-2 medium-2 large-2 cell">
+                <a href="about.html" class="circle-btn">
+                  <img class="btn-img" src= "images/noun-about-5361219.svg" >
+                  <span>About</span>
+                </a>
+              </div>
+              <div class="small-2 medium-2 large-2 cell">
+                <a href="price.html" class="circle-btn">
+                  <img class="btn-img" src="images/noun-pound-7903417.svg" >
+                  <span>Price List</span>
+                </a>
+              </div>
+              <div class="small-2 medium-2 large-2 cell">
+                <a href="contact.html" class="circle-btn">
+                  <img class="btn-img" src="images/noun-contact-7966362.svg" >
+                  <span>Contact</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
-  </div>
 
-<footer class= "pixel-footer">
-  <p>&copy; Pixel &amp; Wood Code Studio</p>
-</footer>
+    <div class="grid-y" style="flex:1;">
+      <div class="cell auto"></div>
+    </div>
 
-
+    <!-- Bottom: footer stays at the bottom -->
+    <div class="cell shrink footer">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x align-center">
+                <div class="cell small-10 medium-10 cell-content">
+                    <p>&copy; Pixel &amp; Wood Code Studio</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="js/vendor/jquery.js"></script>
 <script src="js/vendor/what-input.js"></script>
