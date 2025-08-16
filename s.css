@@ -1,0 +1,199 @@
+body { font-family: "Quicksand", sans-serif; margin: 2em;background-color: #eeeeee; padding: 30px;}
+
+h1, h4 {font-family: "Quicksand", sans-serif;}
+
+p {font-family: "Quicksand", sans-serif;}
+
+.logo-img {
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  background: transparent !important;
+}
+
+.cell{
+  text-align: center;
+}
+
+
+
+/* about.html */
+
+/* About section photo */
+.about-photo {
+  border-radius: 50%;
+  object-fit: cover;
+  display: inline-block;
+}
+
+/* Small screens: 200x200 and centered text */
+@media screen and (max-width: 639px) {
+  .about-photo {
+    width: 200px;
+    height: 200px;
+  }
+  .about-section {
+    text-align: center;
+  }
+  .about-section .about-photo {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Medium and up: 300x300 */
+@media screen and (min-width: 640px) {
+  .about-photo {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.btn-img{
+  display:block;
+  margin:0 auto;
+  height:auto;
+  width:auto;
+}
+/* Circle button hover and active effects */
+.circle-btn {
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  box-sizing: border-box;            /* prevent size jump on hover */
+  border-bottom: 2px solid transparent; /* reserve underline space */
+}
+
+.circle-btn:hover,
+.circle-btn:focus {
+  color: #ff5900; /* Change to your desired hover colour */
+  border-bottom: 2px solid #007BFF; /* Underline effect */
+  text-decoration: none; /* Prevent default underline styles */
+}
+
+.circle-btn:active {
+  color: #0056b3; /* Slightly darker shade for active click */
+  border-bottom: 2px solid #0056b3;
+}
+
+/* ===== Responsive spacing for circle buttons (fix small screens) ===== */
+.circle-buttons-row { 
+  margin-top: 1rem; /* tighter gap above buttons on small */
+}
+.circle-buttons-row .cell {
+  margin-bottom: 1rem; /* space between stacked buttons */
+}
+.circle-btn {
+  display: inline-flex; /* stack icon over label */
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.75rem 0; /* touch-friendly target */
+}
+/* Override inline <img> icon sizes on small screens */
+.circle-btn img {
+  width: auto;
+  height: auto;
+  max-width: 48px;
+  max-height: 48px;
+  margin: 0 auto 0.25rem auto;
+  display: block;
+}
+/* Medium and up: restore larger spacing and icon size */
+@media screen and (min-width: 640px) {
+  .circle-buttons-row { 
+    margin-top: 2rem; 
+  }
+  .circle-buttons-row .cell {
+    margin-bottom: 0; /* remove extra gap when buttons are side by side */
+  }
+}
+
+/* Allow per-icon custom sizing via class */
+.circle-btn img.btn-img {
+  height: 100px; /* adjust as needed */
+  width: auto;
+}
+
+/* ===== Footer positioning without anchoring ===== */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+body {
+  min-height: 100vh;
+}
+.grid-container {
+  flex: 1;
+}
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+/* Transparent form container */
+.callout {
+  background-color: transparent;
+  box-shadow: none; /* remove default Foundation shadow if present */
+  border: none;
+}
+
+/* Rounded input boxes */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  border-radius: 8px;
+}
+
+/* Rounded submit button */
+input[type="submit"], .button {
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+input[type="submit"]:hover,
+.button:hover,
+input[type="submit"]:focus,
+.button:focus {
+  color: #040404; /* or desired hover colour */
+  text-decoration: underline;
+}
+
+/* === Medium-only adjustments for better spacing === */
+@media screen and (min-width: 640px) and (max-width: 1200px) {
+  .about-photo {
+    width: 240px;
+    height: 240px;
+  }
+  .circle-btn {
+    gap: 0.25rem;
+    padding: 0.5rem 0;
+  }
+  .circle-buttons-row .cell {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  .circle-btn span {
+    font-size: 0.95rem; /* NOTE: no nowrap here */
+  }
+}
+
+/* Motto font styling */
+.motto-text {
+  font-family: 'Press Start 2P', monospace;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Quote styling */
+.quote-text {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+}

@@ -1,0 +1,320 @@
+html, body { 
+  height: 100%; 
+  margin: 0;
+  font-family: "Quicksand", sans-serif; 
+  background-color: #eeeeee; 
+}
+
+.page { 
+  min-height: 100vh; 
+}
+
+.main-content { 
+  padding: 1rem 0; 
+  display: flex;
+  flex-direction: column;   /* logo above buttons */
+  justify-content: center;
+}
+
+.main-content .button-center{
+  margin-top: 1rem;
+}
+
+.main-content-about {
+  display: block;         /* no vertical centering */
+  min-height: auto;       /* let it grow with content */
+  overflow: visible;      /* allow natural scroll */
+}
+
+.main-content-contact {
+  display: block;         /* no vertical centering */
+  min-height: auto;       /* let it grow with content */
+  overflow: visible;      /* allow natural scroll */
+}
+
+.main-content-about img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* About section photo */
+.about-photo {
+  border-radius: 50%;
+  object-fit: cover;
+  display: inline-block;
+}
+
+.footer { 
+  background: transparent;
+  margin-top: 1rem;
+}
+
+.footer .cell-content p{
+  
+  background: #8a8a8a;
+  padding: 0.75rem 0; 
+  text-align: center;
+  color: #fcfafa;
+  border-radius: 2em;
+  
+}
+
+h1,h2,h3,h4,h5,p {font-family: "Quicksand", sans-serif;}
+/* Reset Foundation hamburger button size */
+
+.menu-icon {
+  width: 1.4rem;   /* Foundation default */
+  height: 1.3125rem; /* Foundation default */
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: #040404;
+}
+
+.menu-icon::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: currentColor;                /* middle bar */
+  box-shadow: 0 7px 0 currentColor,        /* top bar */
+              0 14px 0 currentColor;       /* bottom bar */
+}
+
+.menu-icon:hover {
+  color: #007BFF; /* hover colour for all bars */
+}
+
+.menu-icon:hover::after {
+  background: currentColor; /* middle bar hover colour */
+  box-shadow: 0 7px 0 currentColor, 0 14px 0 currentColor; /* top & bottom bar hover colour */
+}
+
+.title-bar-title{
+  color: #040404;
+  margin-left: 0.5rem;
+}
+.logo-img {
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  background: transparent !important;
+}
+
+/* === Price page icons === */
+/* Price image sizing */
+.price-img { 
+  display: block; 
+  height: auto; 
+  max-width: 100%; 
+  margin: 0 auto 1rem auto;          /* center */
+}
+/* Smaller on phones */
+@media (max-width: 639px) {
+  .price-img { max-width: 320px;    /* or swap to max-width: 320px; */
+  height: 500px;
+}}
+/* Comfortable cap on large screens */
+@media (min-width: 1200px) {
+  .price-img { max-width: 640px; }
+}
+.cell{
+  text-align: center;
+}
+.title-bar {
+  background: transparent;
+  
+}
+
+/* Small screens: 200x200 and centered text */
+@media screen and (max-width: 639px) {
+  .about-photo {
+    width: 200px;
+    height: 200px;
+  }
+  .about-section {
+    text-align: center;
+  }
+  .about-section .about-photo {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Medium and up: 300x300 */
+@media screen and (min-width: 640px) {
+  .about-photo {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.btn-img{
+  display:block;
+  margin:0 auto;
+  height:auto;
+  width:auto;
+}
+/* Circle button hover and active effects */
+.circle-btn {
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  box-sizing: border-box;            /* prevent size jump on hover */
+  border-bottom: 2px solid transparent; /* reserve underline space */
+}
+
+.circle-btn:hover,
+.circle-btn:focus {
+  color: #ff5900; /* Change to your desired hover colour */
+  border-bottom: 2px solid #007BFF; /* Underline effect */
+  text-decoration: none; /* Prevent default underline styles */
+}
+
+.circle-btn:active {
+  color: #0056b3; /* Slightly darker shade for active click */
+  border-bottom: 2px solid #0056b3;
+}
+
+/* ===== Responsive spacing for circle buttons (fix small screens) ===== */
+.circle-buttons-row { 
+  margin-top: 1rem; /* tighter gap above buttons on small */
+}
+.circle-buttons-row .cell {
+  margin-bottom: 1rem; /* space between stacked buttons */
+}
+.circle-btn {
+  display: inline-flex; /* stack icon over label */
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.75rem 0; /* touch-friendly target */
+}
+/* Override inline <img> icon sizes on small screens */
+.circle-btn img {
+  width: auto;
+  height: auto;
+  max-width: 48px;
+  max-height: 48px;
+  margin: 0 auto 0.25rem auto;
+  display: block;
+}
+/* Medium and up: restore larger spacing and icon size */
+@media screen and (min-width: 640px) {
+  .circle-buttons-row { 
+    margin-top: 2rem; 
+  }
+  .circle-buttons-row .cell {
+    margin-bottom: 0; /* remove extra gap when buttons are side by side */
+  }
+}
+
+/* Allow per-icon custom sizing via class */
+.circle-btn img.btn-img {
+  height: 100px; /* adjust as needed */
+  width: auto;
+}
+
+/* Transparent form container */
+.callout {
+  background-color: transparent;
+  box-shadow: none; /* remove default Foundation shadow if present */
+  border: none;
+}
+
+/* Rounded input boxes */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  border-radius: 8px;
+}
+
+/* Rounded submit button */
+input[type="submit"], .button {
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+input[type="submit"]:hover,
+.button:hover,
+input[type="submit"]:focus,
+.button:focus {
+  color: #040404; /* or desired hover colour */
+  text-decoration: underline;
+}
+/* Medium to Large */
+/* === Medium-only adjustments for better spacing === */
+@media screen and (min-width: 640px) and (max-width: 1200px) {
+  .about-photo {
+    width: 240px;
+    height: 240px;
+  }
+  .circle-btn {
+    gap: 0.25rem;
+    padding: 0.5rem 0;
+  }
+  .circle-buttons-row .cell {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  .circle-btn span {
+    font-size: 0.95rem;
+  }
+  .main-content-about .about-section { text-align: center; }
+  .main-content-about .about-heading { text-align: center; }
+  .main-content-about .about-text { text-align: center; }
+}
+
+/* Large Screens */
+@media screen and (min-width: 1200px) {
+  .main-content-about .about-section { text-align: left; }
+  .main-content-about .about-heading { text-align: left; }
+  .main-content-about .about-text { text-align: left; }
+}
+
+/* Small-only hamburger spacing */
+.title-bar.show-for-small-only { 
+  padding-left: 0.75rem;  /* pushes the whole bar in from the edge */
+}
+.title-bar.show-for-small-only .menu-icon { 
+  margin-left: 0;          /* rely on bar padding instead of button margin */
+  flex: 0 0 auto;          /* prevent stretch in flex containers */
+}
+
+
+@media screen and (max-width: 639px) {
+  /* Ensure hamburger isn’t flush to the viewport edge on small */
+  .title-bar { 
+    padding-left: 0.75rem; 
+    padding-right: 0.75rem; 
+  }
+  .title-bar .menu-icon { 
+    margin: 0;           /* let bar padding create the gap */
+    flex: 0 0 auto;      /* prevent stretch */
+  }
+  .title-bar.show-for-small-only {
+    margin-bottom: 1rem;
+  }
+}
+
+/* --- Force small-only hamburger spacing (wins over Foundation) --- */
+@media screen and (max-width: 639px) {
+  /* pad the whole bar so nothing sits flush to the edge */
+  .title-bar { 
+    padding-top: 0.75rem;
+    padding-left: 0.75rem !important; 
+    padding-right: 0.75rem !important; 
+  }
+  /* also ensure the button itself has a little gap */
+  .title-bar > .menu-icon,
+  .title-bar .menu-icon.button,
+  .title-bar .menu-icon {
+    margin-left: 0.25rem !important; 
+    margin-right: 0 !important; 
+    flex: 0 0 auto; 
+  }
+
+
+  
+}

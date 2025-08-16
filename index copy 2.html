@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  </head>
+<body class="index-page">
+
+    <div class="grid-container">
+      <!-- <div class="grid-x grid-padding-x">
+        <div class="large-12 cell">
+          <h1>Pixel & Wood Code Studio</h1>
+          
+          <form action="login.php" method="post">
+
+            <fieldset><legend>Enter your information in the form below:</legend>
+
+            Email: <input type="email" name="email" required><br>
+            Password: <input type="password" name="password" required><br>
+
+            </fieldset>
+
+            <p class="text-center"><input type="submit" name="submit" value="Submit My Information"></p>
+
+          </form>
+        </div>
+      </div> -->
+
+      <div class="grid-x align-center">
+        <div class="cell shrink text-center">
+          <img class="responsive-img" src="images/logo1.png" style="width: 100%; height: auto;">
+        </div>
+      </div>
+      <div class="grid-x align-center">
+        <div class="cell small-12 medium-6 large-4">
+          <form class="log-in-form" action="login.php" method="post">
+            <h4 class="text-center">Log In</h4>
+            <label>Email
+              <input type="email" name="email" placeholder="somebody@example.com">
+            </label>
+            <label>Password
+              <input type="password" name="password" placeholder="Password">
+            </label>
+            <input id="show-password" type="checkbox"><label for="show-password">Show password</label>
+            <p><input type="submit" class="button expanded" value="Log in"></input></p>
+            <p class="text-center"><a href="#">Forgot your password?</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+      
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/a.js"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('error') === 'notfound') {
+        alert('Login failed: user not found or password incorrect.');
+      }
+    </script>
+  </body>
+</html>
