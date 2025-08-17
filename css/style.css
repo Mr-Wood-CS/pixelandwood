@@ -239,5 +239,5 @@ h1, h2, h3, h4, h5, p { font-family: "Quicksand", sans-serif; }
 /* Nudge the price intro up without touching the image row */
 .price-row--intro { margin-top: -0.5rem; }
 @media (max-width: 639px) {
-  .price-row--intro { margin-top: -0.75rem; }
+  .price-row--intro { margin-top: -5rem; }
 }
