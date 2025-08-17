@@ -48,6 +48,7 @@
 
       <!-- Wrap page content so it shifts when menu opens -->
       <div class="off-canvas-content" data-off-canvas-content>
+        <div class="grid-y page">
 
 
         <!-- Top: your icon/buttons bar (constrained by grid-container) -->
@@ -59,24 +60,25 @@
           </div>
 
           <!-- Middle: grows to fill leftover space -->
-          <div class="cell auto main-content-about">
+          <div class="cell auto main-content-about align-center-middle">
             <div class="grid-container show-for-medium">
                 <div class="grid-x align-center">
                     <div class="cell shrink text-center">
-                        <img class="logo-img" src="images/Logo/logo.svg" alt="Pixel &amp; Wood"/>
+                        <img class="logo-img" src="images/logo/logo.svg" alt="Pixel &amp; Wood"/>
                     </div>
                 </div>
             </div>
 
             <div class="grid-x align-center">
               <div class="cell small-10 medium-6 large-4 text-center price-row prices">
+                <p class="price-intro">Below are my current tuition rates. If you have any other enquiries, please get in touch and I’ll be happy to help.</p>
                 <img class="price-img" src="images/Price_List.png" alt="1-1 tuition icon">
               </div>
             </div>
 
             </div>
               
-            <div class="button-center hide-for-small-only">
+            <div class="cell shrink button-center hide-for-small-only">
               <div class="grid-container">
                 <div class="grid-x grid-margin-x align-center">
 
@@ -100,17 +102,12 @@
                       <span>Contact</span>
                     </a>
                   </div>
-
                 </div>
               </div>
             </div>
           </div>
         </div>
               
-        <div class="grid-y" style="flex:1;">
-          <div class="cell auto"></div>
-        </div>
-
         <!-- Bottom: footer stays at the bottom -->
         <div class="cell shrink footer ">
             <div class="grid-container">
@@ -121,6 +118,7 @@
                 </div>
             </div>
         </div>
+      </div>
     </div>
 
 <script src="js/vendor/jquery.js"></script>

@@ -47,6 +47,7 @@
 
       <!-- Wrap page content so it shifts when menu opens -->
       <div class="off-canvas-content" data-off-canvas-content>
+        <div class="grid-y page">
 
 
         <!-- Top: your icon/buttons bar (constrained by grid-container) -->
@@ -58,12 +59,12 @@
           </div>
 
           <!-- Middle: grows to fill leftover space -->
-          <div class="cell auto main-content-about flex">
+          <div class="cell auto main-content-about align-center-middle">
 
             <div class="grid-container show-for-medium">
                 <div class="grid-x align-center">
                     <div class="cell shrink text-center">
-                        <img class="logo-img" src="images/Logo/logo.svg" alt="Pixel &amp; Wood"/>
+                        <img class="logo-img" src="images/logo/logo.svg" alt="Pixel &amp; Wood"/>
                     </div>
                 </div>
             </div>
@@ -111,11 +112,11 @@
               </div>
             </div>
           </div>
-        </div>
+        
               
-        <div class="grid-y" style="flex:1;">
+       <!--<div class="grid-y" style="flex:1;">
           <div class="cell auto"></div>
-        </div>
+        </div>--> 
 
         <!-- Bottom: footer stays at the bottom -->
         <div class="cell shrink footer ">
@@ -127,6 +128,7 @@
                 </div>
             </div>
         </div>
+      </div> <!-- /.grid-y.page inside off-canvas-content -->
     </div>
 
 <script src="js/vendor/jquery.js"></script>
