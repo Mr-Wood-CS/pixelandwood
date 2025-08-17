@@ -100,7 +100,7 @@ h1,h2,h3,h4,h5,p {font-family: "Quicksand", sans-serif;}
   display: block;
   width: 80%;
   height: auto;
-  margin: 0 auto;
+  margin: 0 auto 1rem auto;
   background: transparent !important;
 }
 
