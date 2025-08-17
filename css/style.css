@@ -167,7 +167,7 @@ input[type="submit"]:focus,
    ===================== */
 /* Price intro (default) */
 .price-intro { 
-  margin: 0.75rem 0;   /* comfortable default spacing */
+  margin-top: 0.75rem 0;   /* comfortable default spacing */
   text-align: center;  /* matches your layout */
 }
 .footer { background: transparent; margin-top: 1rem; }
@@ -198,7 +198,7 @@ input[type="submit"]:focus,
 
   /* Pull intro text a bit higher on small */
   .price-intro { 
-    margin-top: 0.25rem; 
+    margin-top: 5rem; 
     margin-bottom: 0.5rem; 
   }
 }
@@ -236,8 +236,3 @@ input[type="submit"]:focus,
 h1, h2, h3, h4, h5, p { font-family: "Quicksand", sans-serif; }
 
 
-/* Nudge the price intro up without touching the image row */
-.price-row--intro { margin-top: -0.5rem; }
-@media (max-width: 639px) {
-  .price-row--intro { margin-top: -10rem; }
-}
