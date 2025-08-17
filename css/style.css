@@ -165,6 +165,11 @@ input[type="submit"]:focus,
 /* =====================
    5) Footer
    ===================== */
+/* Price intro (default) */
+.price-intro { 
+  margin: 0.75rem 0;   /* comfortable default spacing */
+  text-align: center;  /* matches your layout */
+}
 .footer { background: transparent; margin-top: 1rem; }
 .footer .cell-content p{
   background: #8a8a8a;
@@ -190,6 +195,12 @@ input[type="submit"]:focus,
 
   /* Price image: smaller cap on phones */
   .price-img { max-width: 320px; height: auto; }
+
+  /* Pull intro text a bit higher on small */
+  .price-intro { 
+    margin-top: 0.25rem; 
+    margin-bottom: 0.5rem; 
+  }
 }
 
 /* --- Medium (≥640px and <1200px) --- */
