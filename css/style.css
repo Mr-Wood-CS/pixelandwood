@@ -210,8 +210,7 @@ input[type="submit"]:focus,
 /* --- Medium (≥640px and <1200px) --- */
 @media (min-width: 640px) and (max-width: 1199px) {
   /* About avatar size (single, non-conflicting value) */
-  .about-photo { width: clamp(220px, 25vw, 400px); height: clamp(220px, 25vw, 400px);}
-
+  
   /* Keep About text centred on medium for symmetry */
   .main-content-about .about-section { text-align: center; }
   .main-content-about .about-heading { text-align: center; }
@@ -229,7 +228,7 @@ input[type="submit"]:focus,
   .main-content-about .about-section { text-align: left; }
   .main-content-about .about-heading { text-align: left; }
   .main-content-about .about-text { text-align: left; }
-  .about-photo {width: clamp(280px, 22vw, 360px); height: clamp(280px, 22vw, 360px);}
+  
 
   /* Prices image comfortable cap on very large screens */
   .price-img { max-width: 640px; }
