@@ -48,30 +48,11 @@ if ($enquiry === '') {
 }
 
 if ($errors) {
-  // Build list HTML safely
-  $list = '<ul>';
-  foreach ($errors as $e) {
-    $list .= '<li>' . htmlspecialchars($e, ENT_QUOTES, 'UTF-8') . '</li>';
-  }
-  $list .= '</ul>';
-
-  echo '<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>There was a problem</title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta http-equiv="refresh" content="7;url=contact.html">
-</head>
-<body>
-  <div class="main-content">
-    <h2>There was a problem</h2>
-    ' . $list . '
-    <p>You will be redirected back to the contact form in 7 seconds…</p>
-    <p><a href="contact.html">Go back now</a></p>
-  </div>
-</body>
-</html>';
+  $message = implode("\\n", $errors);
+  echo "<script>
+          alert('There was a problem:\\n{$message}');
+          window.location.href = 'contact.html';
+        </script>";
   exit;
 }
 
@@ -116,41 +97,11 @@ try {
   // Send it
   $mail->send();
 
-  // Simple success message with full HTML and redirect
-  echo '<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Message Sent</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <div class="main-content">
-    <h2>Thanks! Your message has been sent.</h2>
-    <p>I\'ll reply to you by email soon.</p>
-    <p>You will be redirected to the homepage in 5 seconds...</p>
-  </div>
-  <meta http-equiv="refresh" content="5;url=index.html">
-</body>
-</html>';
+  // Redirect to success page
+  header("Location: success.html");
   exit;
 
 } catch (Exception $e) {
-  echo '<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Message Failed</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <div class="main-content">
-    <h2>Sorry—your message could not be sent right now.</h2>
-    <p>Please email me directly at <a href="mailto:pixelandwoodcodestudio@gmail.com">pixelandwoodcodestudio@gmail.com</a>.</p>
-    <p>You will be redirected to the homepage in 5 seconds...</p>
-  </div>
-  <meta http-equiv="refresh" content="5;url=index.html">
-</body>
-</html>';
+  header("Location: error.html");
   exit;
 }

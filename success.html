@@ -1,0 +1,60 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You • Pixel & Wood Computer Science Tutoring</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Auto-redirect to homepage after 5 seconds -->
+    <meta http-equiv="refresh" content="5;url=index.html">
+    <style>
+      /* Small, page-specific polish without touching global CSS */
+      .thankyou-wrap { min-height: 100vh; }
+      .thankyou-logo { max-width: 200px; height: auto; margin-bottom: 1.5rem; }
+      .thankyou-box { border-radius: 12px; }
+    </style>
+  </head>
+  <body>
+
+    <!-- Center everything vertically & horizontally -->
+    <div class="grid-y align-center-middle thankyou-wrap">
+      <div class="cell">
+        <div class="grid-container">
+          <div class="grid-x align-center text-center">
+              <div class="grid-x align-center">
+                <div class="cell small-10 medium-8 text-center">
+                    <img class="logo-img" src="images/Logo/logo.svg" alt="Pixel &amp; Wood"/>
+                </div>
+              </div>
+           
+
+              <!-- Message box -->
+              <div class="callout thankyou-box">
+                <h2>Thank you!</h2>
+                <p>Your message has been sent successfully. I’ll reply soon.</p>
+                <p class="margin-bottom-0">You’ll be redirected to the homepage in 5 seconds.</p>
+                <p class="show-for-sr">Auto redirect link: <a href="index.html">Go to homepage</a></p>
+              </div>
+
+              <!-- Manual fallback link -->
+              <p><a href="index.html" class="button">Go to Homepage now</a></p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+  </body>
+</html>
