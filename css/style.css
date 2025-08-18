@@ -148,10 +148,14 @@ input[type="submit"]:focus,
    4) Page Sections
    ===================== */
 /* About section */
-.about-photo { 
+.about-photo {
+  display: block;
+  width: min(320px, 45vw);
+  aspect-ratio: 1 / 1;
+  height: auto;
+  max-width: 100%;
   border-radius: 50%;
   object-fit: cover;
-  display: inline-block;
 }
 
 /* Prices page — image */
@@ -206,7 +210,7 @@ input[type="submit"]:focus,
 /* --- Medium (≥640px and <1200px) --- */
 @media (min-width: 640px) and (max-width: 1199px) {
   /* About avatar size (single, non-conflicting value) */
-  .about-photo { width: 300px; height: 300px; }
+  .about-photo { width: clamp(220px, 25vw, 400px); height: clamp(220px, 25vw, 400px);}
 
   /* Keep About text centred on medium for symmetry */
   .main-content-about .about-section { text-align: center; }
@@ -225,6 +229,7 @@ input[type="submit"]:focus,
   .main-content-about .about-section { text-align: left; }
   .main-content-about .about-heading { text-align: left; }
   .main-content-about .about-text { text-align: left; }
+  .about-photo {width: clamp(280px, 22vw, 360px); height: clamp(280px, 22vw, 360px);}
 
   /* Prices image comfortable cap on very large screens */
   .price-img { max-width: 640px; }
