@@ -135,6 +135,11 @@ html, body {
 .circle-buttons-row { margin-top: 1rem; }
 .circle-buttons-row .cell { margin-bottom: 1rem; }
 
+/* Button bar spacing */
+.button-center {
+  margin-top: 2rem;  /* adjust as needed */
+}
+
 /* Forms */
 .callout { background-color: transparent; box-shadow: none; border: none; }
 input[type="text"], input[type="email"], input[type="password"], textarea { border-radius: 8px; }
